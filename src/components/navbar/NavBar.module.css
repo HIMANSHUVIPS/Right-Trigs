@@ -40,7 +40,7 @@ nav {
     display: flex;
     list-style: none;
     align-items: center;
-    gap: 15px;
+    gap: 5px;
   }
   .nav_content ul li {
       font-family: "Montserrat", sans-serif;
