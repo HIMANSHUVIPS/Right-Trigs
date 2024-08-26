@@ -5,7 +5,7 @@ const NavBar = ({logo}) => {
     <nav>
       <div className={styles.logo}>
         <div className={styles.img}>
-          <img src={logo} alt="" srcset="" />
+          <img src={logo} alt="logo" />
         </div>
         <div className={styles.logo_name}>
           <h1>RIGHT TRIGS</h1>
