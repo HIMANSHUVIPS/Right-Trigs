@@ -8,32 +8,38 @@ const Data = [
     {
         id:1,
         name:'Anxiety',
-        img:Anxiety
+        img:Anxiety,
+        category:'Health',
     },
     {
         id:2,
         name:'Depression',
-        img:Depression
+        img:Depression,
+        category:'IQ',
     },
     {
         id:3,
         name:'OCD',
-        img:ocd
+        img:ocd,
+        category:'Relationships',
     },
     {
         id:4,
         name:'Panic Disorder',
-        img:Panic_Disorder
+        img:Panic_Disorder,
+        category:'Health',
     },
     {
         id:5,
         name:'Insomnia',
-        img:Insomnia
+        img:Insomnia,
+        category:'IQ',
     },
     {
         id:6,
         name:'Bipolar Disorder',
-        img:Bipolar_Disorder
+        img:Bipolar_Disorder,
+        category:'Relationships',
     }
 ];
 
