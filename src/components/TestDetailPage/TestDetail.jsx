@@ -25,14 +25,23 @@ const TestDetail = () => {
       <div className={styles.firstSection}>
         <div className={styles.leftContent}>
           <h1>{test.name}</h1>
-          <h4>{test.discription}</h4>
+          <p>{test.about}</p>
           <button type="button">Get Started</button>
         </div>
         <div className={styles.rightContent}>
           <img src={test.img} alt=""/>
         </div>
       </div>
-      <div className={styles.secondSection}></div>
+      <div className={styles.secondSection}>
+        <div className={styles.secondLeft}>
+            <h1>You are not alone</h1>
+            <p>{test.discription}</p>
+        </div>
+        <div className={styles.secondRight}>
+            <h1>{test.sufferNumber}</h1>
+            <p>{test.sufferAbout}</p>
+        </div>
+      </div>
     </div>
   );
 };
