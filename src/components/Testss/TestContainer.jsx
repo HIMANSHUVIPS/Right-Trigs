@@ -6,8 +6,8 @@ const TestContainer = ({filter}) => {
   const filterData = filter === "All" ? Data : Data.filter((item) => item.category === filter);
   return (
     <div className={styles.container}>
-      {filterData.map((item)=>(
-        <TestItem key={item.id} name={item.name} img={item.img}/>
+      {filterData.map(({id,name,img})=>(
+        <TestItem key={id} name={name} img={img}/>
       ))}
       
     </div>

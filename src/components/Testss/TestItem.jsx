@@ -1,18 +1,19 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleRight } from "@fortawesome/free-solid-svg-icons";
-
 import styles from "./TestItem.module.css";
+
 const TestItem = ({name,img}) => {
   return (
-    <div className={styles.item}>
+    <Link to={`/test/${name}`} className={styles.item}>
       <img src={img} alt="Anxiety" />
       <h1>{name}</h1>
       <div className={styles.extraTest}>
         Start Test  
         <FontAwesomeIcon icon={faAngleRight} className={styles.rightAngle} />
       </div>
-    </div>
+    </Link>
   );
 };
 
