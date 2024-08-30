@@ -2,7 +2,7 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./TestDetail.module.css";
 import { TestDetailData } from "../../Data/TestDetailData";
-import img from "../../assets/img_1.jpg";
+import img from "../../assets/yoga.jpg"
 
 const TestDetail = () => {
   const { name } = useParams();
