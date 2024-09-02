@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import { useParams } from "react-router-dom";
 import styles from "./TestDetail.module.css";
 import { TestDetailData } from "../../Data/TestDetailData";
-import img from "../../assets/yoga.jpg"
 
 const TestDetail = () => {
   const { name } = useParams();
@@ -44,54 +43,29 @@ const TestDetail = () => {
       </div>
       <div className={styles.thirdSection}>
         <h1>
-          <span className={styles.span1}>Right</span><span className={styles.span2}>Trigs</span> is confidential, convenient, and affordable
+          <span className={styles.span1}>Right</span>
+          <span className={styles.span2}>Trigs</span> is confidential,
+          convenient, and affordable
         </h1>
         <div className={styles.comments}>
-          <div className={styles.one}>
-            <div className={styles.top}>
-              <div className={styles.img}>
-                <img src={img} alt="" />
+          {test.reviews.map((item,index) => (
+            <div key={index} className={styles.one}>
+              <div className={styles.top}>
+                <div className={styles.img}>
+                  <img src={item.img} alt={`${test.name} image`} />
+                </div>
+                <div className={styles.top_content}>
+                  <h1>{item.name}</h1>
+                  <p>{item.date}</p>
+                </div>
               </div>
-              <div className={styles.top_content}>
-                <h1>Himashu</h1>
-                <p>23 Aug,2022</p>
-              </div>
-            </div>
-            <div className={styles.bottom}>
-              I’m so grateful for <span>@righttrigs</span>. Really did change the whole idea
-              of therapy for me. ❤️
-            </div>
-          </div>
-          <div className={styles.one}>
-            <div className={styles.top}>
-              <div className={styles.img}>
-                <img src={img} alt="" />
-              </div>
-              <div className={styles.top_content}>
-                <h1>Himashu</h1>
-                <p>23 Aug,2022</p>
+              <div className={styles.bottom}>
+                {/* I’m so grateful for <span>@righttrigs</span>. Really did change
+                the whole idea of therapy for me. ❤️ */}
+                {item.review}
               </div>
             </div>
-            <div className={styles.bottom}>
-              I’m so grateful for <span>@righttrigs</span>. Really did change the whole idea
-              of therapy for me. ❤️
-            </div>
-          </div>
-          <div className={styles.one}>
-            <div className={styles.top}>
-              <div className={styles.img}>
-                <img src={img} alt="" />
-              </div>
-              <div className={styles.top_content}>
-                <h1>Himashu</h1>
-                <p>23 Aug,2022</p>
-              </div>
-            </div>
-            <div className={styles.bottom}>
-              I’m so grateful for <span>@righttrigs</span>. Really did change the whole idea
-              of therapy for me. ❤️
-            </div>
-          </div>
+          ))}
         </div>
       </div>
     </div>
