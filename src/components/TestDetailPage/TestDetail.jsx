@@ -48,7 +48,7 @@ const TestDetail = () => {
           convenient, and affordable
         </h1>
         <div className={styles.comments}>
-          {test.reviews.map((item,index) => (
+          {test.reviews.map((item, index) => (
             <div key={index} className={styles.one}>
               <div className={styles.top}>
                 <div className={styles.img}>
@@ -59,11 +59,7 @@ const TestDetail = () => {
                   <p>{item.date}</p>
                 </div>
               </div>
-              <div className={styles.bottom}>
-                {/* I’m so grateful for <span>@righttrigs</span>. Really did change
-                the whole idea of therapy for me. ❤️ */}
-                {item.review}
-              </div>
+              <div className={styles.bottom}>{item.review}</div>
             </div>
           ))}
         </div>

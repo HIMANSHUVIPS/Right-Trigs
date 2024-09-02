@@ -239,10 +239,10 @@
 }
 
 .top img {
-  width: 80px; /* Adjusted width */
-  height: 80px; /* Adjusted height */
+  width: 80px; 
+  height: 80px; 
   border-radius: 50%;
-  margin-right: 15px; /* Adjusted margin */
+  margin-right: 15px; 
   object-fit: cover;
 }
 
