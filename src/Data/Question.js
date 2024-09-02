@@ -1,5 +1,5 @@
 export const QuestionData = {
-    anxiety: [
+    "Anxiety": [
       {
         question: "How often do you feel nervous or anxious?",
         options: [
@@ -91,7 +91,7 @@ export const QuestionData = {
         ],
       },
     ],
-    depression: [
+    "Depression": [
       {
         question: "How often do you feel sad or hopeless?",
         options: [
@@ -183,7 +183,7 @@ export const QuestionData = {
         ],
       },
     ],
-    ocd: [
+    "OCD": [
         {
           question: "How often do you experience unwanted thoughts that cause distress?",
           options: [
@@ -275,7 +275,7 @@ export const QuestionData = {
           ],
         },
       ],
-      panicDisorder: [
+      "Panic Disorder": [
         {
           question: "How often do you experience sudden feelings of intense fear or terror?",
           options: [
@@ -367,7 +367,7 @@ export const QuestionData = {
           ],
         },
       ],
-      insomnia: [
+      "Insomnia": [
         {
           question: "How often do you have difficulty falling asleep?",
           options: [
@@ -459,7 +459,7 @@ export const QuestionData = {
           ],
         },
       ],
-      bipolarDisorder: [
+      "Bipolar Disorder": [
         {
           question: "Do you experience periods of extreme happiness or euphoria?",
           options: [

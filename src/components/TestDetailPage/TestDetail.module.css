@@ -1,4 +1,3 @@
-/* General Container */
 .container {
     width: 100%;
     display: flex;
@@ -197,9 +196,6 @@
     color: black;
     font-family: "Exo 2", sans-serif;
   }
-
-  
-  /* Comments Section */
 .comments {
   display: flex;
   justify-content: space-around;
@@ -208,13 +204,11 @@
   max-width: 1200px;
   gap: 50px;
 }
-
-/* Individual Comment Box */
 .one {
   flex: 1;
-  min-width: 300px; /* Ensure a minimum width for smaller screens */
+  min-width: 300px; 
   max-width: 100%;
-  height: auto; /* Adjust height to content */
+  height: auto; 
   background-color: #ffffff;
   border-radius: 15px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.1);
@@ -222,7 +216,7 @@
   display: flex;
   flex-direction: column;
   transition: all 0.3s ease;
-  margin: 10px; /* Add some margin for spacing */
+  margin: 10px; 
 }
 
 .one:hover {
@@ -249,16 +243,16 @@
 .top .top_content {
   display: flex;
   flex-direction: column;
-  gap: 5px; /* Adjusted gap */
+  gap: 5px;
   margin-left: 20px;
 }
 
 .top h1 {
-  font-size: 4vmin; /* Adjust font size for responsiveness */
+  font-size: 4vmin;
   margin: 0;
   color: white;
   font-family: "Exo 2", sans-serif;
-  word-wrap: break-word; /* Ensure long names break onto the next line */
+  word-wrap: break-word; 
 }
 
 .top p {
@@ -267,7 +261,7 @@
   opacity: 0.9;
   color: white;
   font-family: "Cursive", serif;
-  word-wrap: break-word; /* Ensure long text breaks onto the next line */
+  word-wrap: break-word;
 }
 
 /* Bottom Section */
@@ -291,10 +285,10 @@
   font-family: "Poppins", sans-serif;
 }
 
-/* Additional Media Queries for Responsive Design */
+
 @media (max-width: 768px) {
   .top h1 {
-    font-size: 5vw; /* Smaller font size for small screens */
+    font-size: 5vw;
   }
 
   .top img {
