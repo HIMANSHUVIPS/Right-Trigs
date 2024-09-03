@@ -20,7 +20,6 @@ const NavBar = ({logo}) => {
           <li>Contact Us</li>
           <li>Get Your Personalised Video Now!</li>
         </ul>
-        <img src={menu_btn} alt="" srcset="" className={styles.menu_btn}/>
       </div>
     </nav>
   );

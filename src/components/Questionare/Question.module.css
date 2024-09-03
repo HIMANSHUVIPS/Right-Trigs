@@ -9,6 +9,7 @@
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
   max-width: 500px;
   margin: 20px auto;
+  overflow-y: hidden;
 }
 
 .navigation {
@@ -75,7 +76,9 @@
 }
 
 .result h2 {
-  font-size: 2em;
+  font-size: 5vmin;
+  font-weight: 300;
+  font-family: 'poppins';
   color: #333;
 }
 
@@ -84,7 +87,6 @@
   font-size: 1.2em;
   color: #666;
 }
-
 .restartButton {
   margin-top: 20px;
   background-color: #ff5a5f;
@@ -100,4 +102,77 @@
 
 .restartButton:hover {
   background-color: #e14c4f;
+}
+
+.result {
+  text-align: center;
+  background-color: #ffffff;
+  padding: 30px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin: auto;
+}
+
+.result h2 {
+  font-size: 5vmin;
+  font-weight: 700;
+  font-family: 'Poppins', sans-serif;
+  color: #343a40;
+  margin-bottom: 25px;
+  letter-spacing: 1px;
+}
+
+.result p {
+  margin-top: 15px;
+  font-size: 1.4em;
+  color: #6c757d;
+  line-height: 1.6;
+}
+
+.score {
+  color: #d6336c;
+  font-family: 'Poppins', sans-serif;
+  font-size: 1.5em;
+}
+
+.riskLevel {
+  margin-top: 20px;
+  font-size: 1.6em;
+  font-weight: 600;
+  color: #dc3545;
+}
+
+.restartButton {
+  margin-top: 30px;
+  background-color: #0d6efd;
+  color: white;
+  padding: 15px 40px;
+  border: none;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
+  font-size: 1.2em;
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+.restartButton:hover {
+  background-color: #0a58ca;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2);
+}
+@media(max-width:720px){
+  .container{
+    margin: 0px;
+    width: 90vw;
+  }
+  .prevArrow {
+    font-size: 24px;
+    color: #e14c4f;
+    cursor: pointer;
+    margin-right: 20px;
+    position: relative;
+    right: 80px;
+  }
 }

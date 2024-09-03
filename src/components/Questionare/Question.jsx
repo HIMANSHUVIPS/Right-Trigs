@@ -5,6 +5,7 @@ import { CircularProgressbar } from 'react-circular-progressbar';
 import 'react-circular-progressbar/dist/styles.css';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
+
 const Questionnaire = ({ disorder }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
@@ -27,12 +28,24 @@ const Questionnaire = ({ disorder }) => {
     }
   };
 
+  const getRiskLevel = () => {
+    if (score <= 10) {
+      return "Low Risk";
+    } else if (score <= 20) {
+      return "Moderate Risk";
+    } else {
+      return "High Risk";
+    }
+  };
+
   return (
     <div className={styles.container}>
       {isCompleted ? (
         <div className={styles.result}>
-          <h2>Your Total Score: {score}</h2>
-          <p>Thank you for completing the questionnaire!</p>
+          <h2>{disorder} Test Result</h2>
+          <p>Your Total Score: <span className={styles.score}>{score}</span></p>
+          <p className={styles.riskLevel}>Risk Level: <span>{getRiskLevel()}</span></p>
+          <p>Thank you for completing the test<span>!</span></p>
           <button
             onClick={() => {
               setCurrentQuestionIndex(0);
@@ -51,10 +64,6 @@ const Questionnaire = ({ disorder }) => {
               <FontAwesomeIcon icon={faArrowLeft} 
               className={styles.prevArrow}
               onClick={handlePreviousClick}/>
-              // <FaArrowLeft
-              //   className={styles.prevArrow}
-              //   onClick={handlePreviousClick}
-              // />
             )}
             <div className={styles.progress}>
               <CircularProgressbar value={progressPercentage} text={`${currentQuestionIndex + 1}`} />

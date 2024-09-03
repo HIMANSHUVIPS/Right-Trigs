@@ -82,3 +82,26 @@
     transform: scale(1.5);
      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
 }
+
+@media(max-width:720px){
+    .container{
+        width: 90vw;
+    }
+    .img{
+        width: 100vw;
+    }
+    .img img{
+        width: 100%;   
+    }
+    .text h1{
+        font-size: 8vmin;
+        width: 100%;
+    }
+    .text p{
+        width: 70%;
+        font-weight: 200;
+    }
+    .downArrow{
+        font-size: 20px;
+    }
+}

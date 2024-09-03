@@ -57,3 +57,16 @@ nav {
 .nav_content ul li:hover {
   color: #cd808f;
 }
+
+
+@media(max-width:720px){
+  .logo{
+    width: 25%;
+  }
+  .nav_content{
+    display: none;
+  }
+  .logo .img {
+    width: 15vmin;
+  }
+}
