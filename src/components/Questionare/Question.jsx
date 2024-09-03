@@ -1,12 +1,16 @@
 import React, { useState } from "react";
 import { QuestionData } from "../../Data/Question";
 import styles from "./Question.module.css";
-
+import { CircularProgressbar } from 'react-circular-progressbar';
+import 'react-circular-progressbar/dist/styles.css';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faArrowLeft } from '@fortawesome/free-solid-svg-icons'
 const Questionnaire = ({ disorder }) => {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
   const [score, setScore] = useState(0);
   const [isCompleted, setIsCompleted] = useState(false);
   const questions = QuestionData[disorder];
+  const progressPercentage = ((currentQuestionIndex + 1) / questions.length) * 100;
 
   const handleOptionClick = (optionScore) => {
     setScore((prevScore) => prevScore + optionScore);
@@ -14,6 +18,12 @@ const Questionnaire = ({ disorder }) => {
       setCurrentQuestionIndex((prevIndex) => prevIndex + 1);
     } else {
       setIsCompleted(true);
+    }
+  };
+
+  const handlePreviousClick = () => {
+    if (currentQuestionIndex > 0) {
+      setCurrentQuestionIndex((prevIndex) => prevIndex - 1);
     }
   };
 
@@ -36,6 +46,20 @@ const Questionnaire = ({ disorder }) => {
         </div>
       ) : (
         <>
+          <div className={styles.navigation}>
+            {currentQuestionIndex > 0 && (
+              <FontAwesomeIcon icon={faArrowLeft} 
+              className={styles.prevArrow}
+              onClick={handlePreviousClick}/>
+              // <FaArrowLeft
+              //   className={styles.prevArrow}
+              //   onClick={handlePreviousClick}
+              // />
+            )}
+            <div className={styles.progress}>
+              <CircularProgressbar value={progressPercentage} text={`${currentQuestionIndex + 1}`} />
+            </div>
+          </div>
           <h2 className={styles.question}>
             {questions[currentQuestionIndex].question}
           </h2>

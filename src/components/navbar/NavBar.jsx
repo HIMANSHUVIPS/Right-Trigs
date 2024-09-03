@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./NavBar.module.css";
+import menu_btn from "../../assets/customers/menu-btn.png";
 const NavBar = ({logo}) => {
   return (
     <nav>
@@ -13,12 +14,13 @@ const NavBar = ({logo}) => {
         </div>
       </div>
       <div className={styles.nav_content}>
-        <ul>
+        <ul className={styles.nav_list}>
           <li>Home</li>
           <li>About Us</li>
           <li>Contact Us</li>
           <li>Get Your Personalised Video Now!</li>
         </ul>
+        <img src={menu_btn} alt="" srcset="" className={styles.menu_btn}/>
       </div>
     </nav>
   );
