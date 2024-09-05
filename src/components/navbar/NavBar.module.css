@@ -139,10 +139,14 @@ nav {
 
   .nav_content ul li {
     padding: 10px 0;
-    font-size: 1.2rem;
+    font-size: 6vmin;
+    letter-spacing: 2px;
+    width: 70%;
     color: white;
     text-align: center;
     transition: color 0.3s ease;
+    margin: 30px auto;
+    font-family: "Exo 2", sans-serif;
   }
 
   .nav_content ul li:hover {
