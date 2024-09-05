@@ -1,3 +1,4 @@
+/* Main Navbar styles */
 nav {
   display: flex;
   justify-content: space-between;
@@ -41,6 +42,7 @@ nav {
   text-decoration: none solid rgb(205, 128, 143);
 }
 
+/* Navigation links */
 .nav_content {
   display: flex;
   align-items: center;
@@ -69,14 +71,24 @@ nav {
   color: #cd808f;
 }
 
-/* Responsive Design */
+/* Menu button (hidden by default, shown in mobile view) */
+.menu_btn {
+  display: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+}
+
+/* Responsive styling */
 @media (max-width: 720px) {
   nav {
-    padding: 10px 15px;
+    padding: 10px 5px;
   }
 
   .logo {
     width: 25%;
+    display: flex;
+    justify-content: flex-start;
   }
 
   .logo .img {
@@ -84,46 +96,30 @@ nav {
   }
 
   .nav_content {
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+    justify-content: center;
+    background-color: #db707f;
+    margin-top: -990px;
+    transition: all 0.5s ease;
+  }
+
+  .mobile_view {
+    margin-top: -30px;
+    margin-left: -22px;
+    border-bottom-right-radius: 30%;
+    color: rgb(255, 255, 255);
+  }
+  .remove{
     display: none;
   }
 
-  /* Hamburger Menu */
-  .menu-toggle {
-    display: flex;
-    align-items: center;
-    cursor: pointer;
-  }
-
-  .menu-toggle .bar {
-    width: 25px;
-    height: 3px;
-    background-color: #191e3e;
-    margin: 4px;
-    transition: all 0.3s ease;
-  }
-
-  .menu-toggle.active .bar:nth-child(2) {
-    opacity: 0;
-  }
-
-  .menu-toggle.active .bar:nth-child(1) {
-    transform: translateY(7px) rotate(45deg);
-  }
-
-  .menu-toggle.active .bar:nth-child(3) {
-    transform: translateY(-7px) rotate(-45deg);
-  }
-
-  .nav_content.active {
-    display: flex;
-    flex-direction: column;
+  .menu_btn {
+    display: block;
     position: absolute;
-    top: 60px;
-    right: 15px;
-    background-color: white;
-    border: 1px solid #cd808f;
-    padding: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    right: 45px;
+    top: 30px;
   }
 
   .nav_content ul {
@@ -134,5 +130,18 @@ nav {
   .nav_content ul li {
     padding: 10px 20px;
     text-align: center;
+    margin: 30px auto;
+    font-family: "Exo 2", sans-serif;
+    font-size: 5vmin;
+    letter-spacing: 2px;
   }
+  .nav_content ul li:active {
+    color: #2c060d;
+  }
+  
+  .nav_content ul li:hover {
+    color: #330710;
+  }
+  
+
 }
