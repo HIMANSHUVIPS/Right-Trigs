@@ -1,4 +1,4 @@
-/* Main Navbar styles */
+
 nav {
   display: flex;
   justify-content: space-between;
@@ -6,8 +6,8 @@ nav {
   padding: 10px 20px;
   background-color: white;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  position: relative; /* Allows the nav content to flow normally in the document */
-  z-index: 1;
+  position: relative;
+  z-index: 10;
 }
 
 .logo {
@@ -77,8 +77,6 @@ nav {
 .nav_content ul li:hover {
   color: #cd808f;
 }
-
-/* Menu button (hidden by default, shown in mobile view) */
 .menu_btn {
   display: none;
   width: 30px;
@@ -86,7 +84,6 @@ nav {
   cursor: pointer;
 }
 
-/* Responsive styling for smaller screens */
 @media (max-width: 720px) {
   nav {
     padding: 10px 5px;
@@ -114,7 +111,7 @@ nav {
     left: 0;
     transform: translateY(-100%);
     transition: transform 0.5s ease;
-    z-index: 999;
+    z-index: 0;
   }
 
   .mobile_view {
