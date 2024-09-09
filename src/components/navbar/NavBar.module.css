@@ -83,6 +83,29 @@ nav {
   height: 30px;
   cursor: pointer;
 }
+.nav_content ul li:before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #cd808f;
+  transition: width 0.3s ease;
+}
+
+.nav_content ul li:hover:before {
+  width: 100%; 
+}
+
+.nav_content ul li:active {
+  color: #cd808f;
+}
+
+.nav_content ul li:hover {
+  color: #330710;
+  transform: translateY(-2px); 
+}
 
 @media (max-width: 720px) {
   nav {
@@ -105,13 +128,14 @@ nav {
     height: 100vh;
     width: 100vw;
     justify-content: center;
-    background-color: #db707f;
+    background-color: #db707ea5;
     position: fixed;
     top: 0;
-    left: 0;
+    right: 0;
     transform: translateY(-100%);
     transition: transform 0.5s ease;
     z-index: 0;
+    backdrop-filter: blur(3px);
   }
 
   .mobile_view {
