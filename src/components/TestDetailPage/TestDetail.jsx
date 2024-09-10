@@ -6,6 +6,10 @@ import Questionnaire from "../Questionare/Question";
 
 
 const TestDetail = () => {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   const { name } = useParams();
   const test = TestDetailData[name];
   const [showQuestionnaire, setShowQuestionnaire] = useState(false);
@@ -18,10 +22,6 @@ const TestDetail = () => {
       </>
     );
   }
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
 
   const handleStartClick = () => {
     setShowQuestionnaire(true);

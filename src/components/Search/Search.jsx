@@ -19,7 +19,7 @@ const Search = ({ handleFilterClick}) => {
         trigger: '#links',
         markers: true, 
         scrub: true,
-        start: 'top 85%', 
+        start: 'top 100%', 
         end: 'top 50%', 
         toggleActions: "play none none reverse", 
       }
