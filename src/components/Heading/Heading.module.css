@@ -86,6 +86,7 @@
 @media(max-width:720px){
     .container{
         width: 90vw;
+        height: 85vh;
     }
     .img{
         width: 100vw;

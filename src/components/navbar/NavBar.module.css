@@ -68,6 +68,7 @@ nav {
   font-weight: 500;
   cursor: pointer;
   transition: color 0.3s ease;
+  
 }
 
 .nav_content ul li:active {
@@ -171,6 +172,9 @@ nav {
     transition: color 0.3s ease;
     margin: 30px auto;
     font-family: "Exo 2", sans-serif;
+    text-shadow: 2px 2px 0 black, /* Right */ -2px 2px 0 black,
+    /* Left */ 2px -2px 0 black, /* Top */ -2px -2px 0 black; /* Bottom */
+
   }
 
   .nav_content ul li:hover {
