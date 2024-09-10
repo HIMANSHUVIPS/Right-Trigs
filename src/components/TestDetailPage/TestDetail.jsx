@@ -3,11 +3,52 @@ import { useParams } from "react-router-dom";
 import styles from "./TestDetail.module.css";
 import { TestDetailData } from "../../Data/TestDetailData";
 import Questionnaire from "../Questionare/Question";
-
+import gsap from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import { useGSAP } from "@gsap/react";
+gsap.registerPlugin(ScrollTrigger);
 
 const TestDetail = () => {
-  useEffect(() => {
+    useGSAP(() => {
     window.scrollTo(0, 0);
+
+    gsap.from(`.${styles.firstSection}`, {
+      opacity: 0,
+      y: 50,
+      duration: 2,
+      ease: "power3.out",
+    });
+
+    gsap.from(`.${styles.secondSection}`, {
+      scrollTrigger: {
+        trigger: `.${styles.secondSection}`,
+        start: "top 100%",
+        end: "top 0%",
+        scrub: true,
+      },
+      opacity: 0,
+      x: 500,
+      duration: 2,
+      ease: "power2.out",
+    });
+
+    gsap.from(`.${styles.comments} `, {
+      opacity: 0,
+      x: 300, 
+      scale: 0.8,
+      stagger: 3, 
+      duration: 2,
+      delay:1, 
+      ease: "expo.out", 
+      scrollTrigger: {
+        trigger: `.${styles.comments}`,
+        start: "top 80%",
+        end: "top 50%",
+        scrub: true,
+        toggleActions: "play none none reverse",
+      }
+    });
+
   }, []);
 
   const { name } = useParams();
@@ -25,6 +66,14 @@ const TestDetail = () => {
 
   const handleStartClick = () => {
     setShowQuestionnaire(true);
+    // Animate button click with GSAP
+    gsap.to("button", {
+      scale: 1.1,
+      duration: 0.2,
+      ease: "power2.inOut",
+      yoyo: true,
+      repeat: 1,
+    });
   };
 
   return (
