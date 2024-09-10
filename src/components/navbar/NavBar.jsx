@@ -49,7 +49,7 @@ const NavBar = ({ logo }) => {
       skewY: 10,
       stagger: 0.2,
       ease: "power2.out",
-    });
+    },"-=3");
   });
 
 

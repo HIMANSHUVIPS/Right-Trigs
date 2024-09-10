@@ -1,5 +1,8 @@
-import React, { useState } from "react";
+import React, { useState,useEffect } from "react";
 import styles from "./Search.module.css";
+import { useGSAP } from "@gsap/react";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import gsap from "gsap";
 const Search = ({ handleFilterClick}) => {
   const items = ["All", "Health", "IQ", "Career", "Relationships"];
   const [activeIndex, setActiveIndex] = useState(0);
