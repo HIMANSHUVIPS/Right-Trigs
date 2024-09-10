@@ -24,7 +24,7 @@ const TestDetail = () => {
       gsap.from(`.${styles.secondSection}`, {
         scrollTrigger: {
           trigger: `.${styles.secondSection}`,
-          start: "top 100%",
+          start: "top 90%",
           end: "top 0%",
           scrub: true,
         },
@@ -32,23 +32,6 @@ const TestDetail = () => {
         x: 500,
         duration: 2,
         ease: "power2.out",
-      });
-  
-      gsap.from(`.${styles.comments}`, {
-        opacity: 0,
-        x: 300,
-        scale: 0.8,
-        stagger: 0.5,
-        duration: 2,
-        delay: 1,
-        ease: "expo.out",
-        scrollTrigger: {
-          trigger: `.${styles.comments}`,
-          start: "top 80%",
-          end: "top 50%",
-          scrub: true,
-          toggleActions: "play none none reverse",
-        }
       });
     });
   
@@ -74,22 +57,7 @@ const TestDetail = () => {
         ease: "power2.out",
       });
   
-      gsap.from(`.${styles.comments}`, {
-        opacity: 0,
-        x: 200,
-        scale: 0.9,
-        stagger: 0.2,
-        duration: 1.5,
-        delay: 0.5,
-        ease: "power2.out",
-        scrollTrigger: {
-          trigger: `.${styles.comments}`,
-          start: "top 90%",
-          end: "top 60%",
-          scrub: 0.5,
-          toggleActions: "play none none reverse",
-        }
-      });
+     
     });
   }, []);
 
