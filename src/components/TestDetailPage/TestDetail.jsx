@@ -8,9 +8,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { useGSAP } from "@gsap/react";
 gsap.registerPlugin(ScrollTrigger);
 
+
+
 const TestDetail = () => {
+  const { name } = useParams();
   useGSAP(() => {
-    const mm = gsap.matchMedia(); // Use matchMedia for responsive animations
+    const mm = gsap.matchMedia(); 
     
     mm.add("(min-width: 768px)", () => {
       // Desktop animations
@@ -47,7 +50,7 @@ const TestDetail = () => {
       gsap.from(`.${styles.secondSection}`, {
         scrollTrigger: {
           trigger: `.${styles.secondSection}`,
-          start: "top 90%",
+          start: "top 50%",
           end: "top 10%",
           scrub: true,
         },
@@ -60,8 +63,6 @@ const TestDetail = () => {
      
     });
   }, []);
-
-  const { name } = useParams();
   const test = TestDetailData[name];
   const [showQuestionnaire, setShowQuestionnaire] = useState(false);
 
@@ -73,7 +74,11 @@ const TestDetail = () => {
       </>
     );
   }
-
+  useEffect(() => {
+    // Scroll to the top when the component is mounted
+    window.scrollTo(0, 0);
+  }, []); // E
+  
   const handleStartClick = () => {
     setShowQuestionnaire(true);
     // Animate button click with GSAP
