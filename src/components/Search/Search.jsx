@@ -17,7 +17,7 @@ const Search = ({ handleFilterClick}) => {
       stagger: 0.2, 
       scrollTrigger: {
         trigger: '#links',
-        markers: true, 
+        markers: false, 
         scrub: true,
         start: 'top 100%', 
         end: 'top 50%', 
