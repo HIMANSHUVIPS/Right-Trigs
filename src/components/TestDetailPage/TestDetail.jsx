@@ -30,7 +30,7 @@ const TestDetail = () => {
         },
         opacity: 0,
         x: 500,
-        duration: 2,
+        duration: 0.3,
         ease: "power2.out",
       });
     });
@@ -53,7 +53,7 @@ const TestDetail = () => {
         },
         opacity: 0,
         x: 300,
-        duration: 1.5,
+        duration: 0.5,
         ease: "power2.out",
       });
   
